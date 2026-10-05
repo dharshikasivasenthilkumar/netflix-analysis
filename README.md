@@ -14,32 +14,33 @@ Size: 8,807 records, 12 columns, release years 1925 to 2021
 Columns: show_id, type, title, director, cast, country, date_added, release_year, rating, duration, listed_in, description
 Missing values: director is empty for 2,634 titles, cast for 825, country for 831, date_added for 10, rating for 4 and duration for 3
 
-The CSV is not stored in this repository. See data/README.md for how to get it.
 
 Tools
+
 SQL (PostgreSQL)
+
 Power BI
+
 Repository structure
-netflix-data-analysis-sql/
-├── sql/
-│   └── netflix_analysis.sql        table definition and all 23 queries
-├── docs/
-│   └── Netflix_Data_Analysis_Report.docx
-├── dashboard/
-│   └── Netflix_Power_BI_Dashboard.pdf
-├── data/
-│   └── README.md                   how to download the dataset
-├── .gitignore
-└── README.md
+
 Business questions
+
 Queries	Theme	What they cover
+
 1 to 5	Content type and distribution	Movies vs TV shows, underrepresented genres, titles per genre, TV shows with more than 5 seasons, average seasons per show
+
 6 to 8	Ratings and categorisation	Most common ratings, family-friendly vs mature content, keyword flags ('kill', 'violence') in descriptions
+
 9 to 11	Trends and additions	Titles released in 2020, titles released 2020 to 2024, day of the week titles were added
+
 12 to 14	Regional focus	Top 5 countries, contribution by country, average release year by country
+
 15 to 19	Talent and collaboration	Titles by Rajiv Chilaka, titles featuring Salman Khan, most active actors, most frequent directors, recurring actor pairs
+
 20 to 21	Duration and performance	Longest movie and TV show, long-running TV shows by seasons
+
 22 to 23	Missing metadata and documentaries	Titles without a director, documentary movies
+
 SQL techniques used
 CTEs and aggregates (GROUP BY, COUNT, AVG, ROUND)
 Splitting comma-separated columns into rows with string_to_array and UNNEST
